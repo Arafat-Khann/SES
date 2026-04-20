@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sahak English Studio | Professional English Academy</title>
+  <meta name="description" content="Sahak English Studio in Peshawar offers IELTS, PTE, Oxford ELLT, LanguageCert, Duolingo, Spoken English, and Interview Preparation with active new batches." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    :root {
+      --brand-1: #c6281e;
+      --brand-2: #8e1b13;
+      --ink: #0f0f10;
+      --charcoal: #1c1c1e;
+      --cream: #e6d3b3;
+      --sand: #c9b79a;
+      --soft-gray: #6e6e73;
+      --off-white: #f5f1e8;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --radius-sm: 12px;
+      --max-width: 1200px;
+      --shadow-lg: 0 20px 45px rgba(0, 0, 0, 0.32);
+      --shadow-md: 0 10px 28px rgba(0, 0, 0, 0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      color: var(--off-white);
+      background:
+        radial-gradient(circle at 8% 0%, rgba(198, 40, 30, 0.2), transparent 30%),
+        radial-gradient(circle at 85% 20%, rgba(230, 211, 179, 0.08), transparent 35%),
+        linear-gradient(170deg, #101011, #1a1a1c 50%, #131314 100%);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 3rem));
+      margin: 0 auto;
+    }
+
+    .hero .container {
+      padding-inline: clamp(1rem, 2.5vw, 2.25rem);
+    }
+
+    .section {
+      padding: 5.5rem 0;
+    }
+
+    .section-muted {
+      background: linear-gradient(160deg, rgba(28, 28, 30, 0.92), rgba(15, 15, 16, 0.9));
+      border-top: 1px solid rgba(230, 211, 179, 0.08);
+      border-bottom: 1px solid rgba(230, 211, 179, 0.08);
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--cream);
+      font-size: 0.75rem;
+      margin: 0 0 0.5rem;
+      font-weight: 600;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    h1, h2 {
+      font-family: "Cormorant Garamond", serif;
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 5.4vw, 4.2rem);
+    }
+
+    h2 {
+      font-size: clamp(1.7rem, 3.4vw, 2.8rem);
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .header {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 999;
+      transition: background 0.25s ease, border-color 0.25s ease;
+      border-bottom: 1px solid transparent;
+    }
+
+    .header.scrolled {
+      background: rgba(15, 15, 16, 0.93);
+      border-color: rgba(230, 211, 179, 0.18);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-wrap {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      color: var(--off-white);
+      background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
+      box-shadow: var(--shadow-md);
+    }
+
+    .brand-logo {
+      width: 46px;
+      height: 46px;
+      object-fit: contain;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.04);
+      box-shadow: var(--shadow-md);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.18;
+    }
+
+    .brand-text strong {
+      font-size: 0.98rem;
+      color: var(--off-white);
+    }
+
+    .brand-text span {
+      font-size: 0.75rem;
+      color: var(--sand);
+      letter-spacing: 0.04em;
+    }
+
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+    }
+
+    .desktop-nav a {
+      font-size: 0.9rem;
+      color: var(--sand);
+      transition: color 0.2s ease;
+    }
+
+    .desktop-nav a:hover,
+    .desktop-nav a:focus-visible {
+      color: var(--off-white);
+    }
+
+    .btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 0.86rem 1.35rem;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: transform 0.2s ease, filter 0.2s ease, background 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.06);
+    }
+
+    .btn-primary {
+      color: var(--off-white);
+      background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
+      box-shadow: 0 12px 26px rgba(198, 40, 30, 0.34);
+    }
+
+    .btn-outline {
+      color: var(--cream);
+      border: 1px solid rgba(230, 211, 179, 0.35);
+      background: rgba(15, 15, 16, 0.42);
+    }
+
+    .menu-btn {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: rgba(230, 211, 179, 0.08);
+      border: 1px solid rgba(230, 211, 179, 0.24);
+      color: var(--off-white);
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .mobile-drawer {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: min(82vw, 340px);
+      height: 100vh;
+      background: linear-gradient(160deg, #1e1e20, #121214);
+      border-left: 1px solid rgba(230, 211, 179, 0.2);
+      z-index: 1000;
+      padding: 1.4rem;
+      transition: right 0.35s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .mobile-drawer.open {
+      right: 0;
+    }
+
+    .mobile-drawer a {
+      padding: 0.7rem 0.3rem;
+      border-bottom: 1px solid rgba(230, 211, 179, 0.14);
+      color: var(--sand);
+      font-weight: 500;
+    }
+
+    .mobile-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.48);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+      z-index: 998;
+    }
+
+    .mobile-overlay.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 88px;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(8px);
+      pointer-events: none;
+    }
+
+    .hero::before {
+      width: 380px;
+      height: 380px;
+      left: -120px;
+      top: -90px;
+      background: radial-gradient(circle, rgba(198, 40, 30, 0.36), rgba(198, 40, 30, 0));
+    }
+
+    .hero::after {
+      width: 460px;
+      height: 460px;
+      right: -130px;
+      bottom: -120px;
+      background: radial-gradient(circle, rgba(230, 211, 179, 0.2), rgba(230, 211, 179, 0));
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 1.4rem;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-copy p {
+      margin-top: 1rem;
+      max-width: 62ch;
+      color: #e9ddca;
+    }
+
+    .hero-actions {
+      margin-top: 1.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .hero-metrics {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.8rem;
+    }
+
+    .metric {
+      border: 1px solid rgba(230, 211, 179, 0.22);
+      border-radius: var(--radius-sm);
+      background: rgba(28, 28, 30, 0.75);
+      padding: 0.85rem;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 1.25rem;
+      color: var(--off-white);
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+
+    .hero-panel {
+      border: 1px solid rgba(230, 211, 179, 0.2);
+      border-radius: var(--radius-lg);
+      background: linear-gradient(155deg, rgba(25, 25, 27, 0.94), rgba(16, 16, 17, 0.88));
+      box-shadow: var(--shadow-lg);
+      padding: 1.25rem;
+    }
+
+    .hero-panel h3 {
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-panel ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .hero-panel li {
+      padding: 0.6rem 0;
+      border-bottom: 1px dashed rgba(230, 211, 179, 0.18);
+      color: #e9ddca;
+    }
+
+    .hero-panel li:last-child {
+      border-bottom: 0;
+    }
+
+    .section-head {
+      margin-bottom: 2rem;
+      max-width: 76ch;
+    }
+
+    .section-head p {
+      margin-top: 0.8rem;
+      color: #dac8ac;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .panel,
+    .card,
+    .timeline-item,
+    .contact-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(230, 211, 179, 0.16);
+      background: linear-gradient(162deg, rgba(30, 30, 32, 0.95), rgba(20, 20, 22, 0.9));
+      box-shadow: var(--shadow-md);
+    }
+
+    .panel {
+      padding: 1.3rem;
+    }
+
+    .panel p + p {
+      margin-top: 0.7rem;
+    }
+
+    .value-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .value-list li {
+      margin-bottom: 0.62rem;
+      color: #efdfc8;
+    }
+
+    .stats-grid {
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.8rem;
+    }
+
+    .stat {
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(230, 211, 179, 0.2);
+      padding: 1rem;
+      background: rgba(15, 15, 16, 0.7);
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.9rem;
+      color: var(--cream);
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+
+    .courses-grid,
+    .feature-grid,
+    .results-grid,
+    .gallery-grid,
+    .announcement-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      padding: 1.2rem;
+      height: 100%;
+    }
+
+    .course-meta {
+      margin: 0.8rem 0 1rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .course-meta li {
+      color: #e9ddca;
+      margin-bottom: 0.4rem;
+      font-size: 0.92rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      background: rgba(198, 40, 30, 0.2);
+      border: 1px solid rgba(198, 40, 30, 0.5);
+      padding: 0.2rem 0.65rem;
+      font-size: 0.75rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .feature {
+      display: flex;
+      gap: 0.85rem;
+      align-items: flex-start;
+    }
+
+    .feature i {
+      min-width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      background: rgba(198, 40, 30, 0.22);
+      border: 1px solid rgba(198, 40, 30, 0.52);
+      color: var(--cream);
+    }
+
+    .badge {
+      display: inline-flex;
+      margin-top: 0.85rem;
+      border-radius: 999px;
+      padding: 0.23rem 0.7rem;
+      font-size: 0.77rem;
+      background: rgba(230, 211, 179, 0.14);
+      border: 1px solid rgba(230, 211, 179, 0.28);
+      color: var(--cream);
+    }
+
+    .testimonial-wrap {
+      position: relative;
+      padding: 0 3rem;
+    }
+
+    .testimonial-card {
+      padding: 1.35rem;
+      min-height: 230px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .stars {
+      color: #f3bd4b;
+      letter-spacing: 0.08em;
+      margin: 0.6rem 0;
+      font-size: 1.05rem;
+    }
+
+    .slider-arrow {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid rgba(230, 211, 179, 0.3);
+      background: rgba(15, 15, 16, 0.65);
+      color: var(--off-white);
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .slider-arrow:hover {
+      background: rgba(198, 40, 30, 0.55);
+    }
+
+    .slider-arrow.prev {
+      left: 0;
+    }
+
+    .slider-arrow.next {
+      right: 0;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .timeline-item {
+      padding: 1rem 1.1rem;
+      border-left: 5px solid var(--brand-1);
+    }
+
+    .timeline-item time {
+      display: inline-block;
+      margin-bottom: 0.35rem;
+      color: var(--cream);
+      font-size: 0.86rem;
+      font-weight: 600;
+    }
+
+    .gallery-card {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      min-height: 210px;
+      border: 1px solid rgba(230, 211, 179, 0.18);
+      background:
+        linear-gradient(160deg, rgba(198, 40, 30, 0.35), rgba(15, 15, 16, 0.95)),
+        url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80") center/cover;
+      display: flex;
+      align-items: flex-end;
+      padding: 1rem;
+    }
+
+    .gallery-card:nth-child(2n) {
+      background:
+        linear-gradient(160deg, rgba(142, 27, 19, 0.38), rgba(15, 15, 16, 0.95)),
+        url("https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?auto=format&fit=crop&w=1200&q=80") center/cover;
+    }
+
+    .gallery-card:nth-child(3n) {
+      background:
+        linear-gradient(160deg, rgba(198, 40, 30, 0.42), rgba(15, 15, 16, 0.95)),
+        url("https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=1200&q=80") center/cover;
+    }
+
+    .gallery-card p {
+      font-size: 0.9rem;
+      color: #fbf6ee;
+      font-weight: 600;
+    }
+
+    .gallery-note {
+      margin-top: 1rem;
+      color: var(--sand);
+      font-size: 0.9rem;
+    }
+
+    .enroll-box {
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(230, 211, 179, 0.2);
+      background: linear-gradient(160deg, rgba(198, 40, 30, 0.18), rgba(23, 23, 24, 0.9));
+      box-shadow: var(--shadow-lg);
+      padding: 1.2rem;
+    }
+
+    .enroll-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .form {
+      display: grid;
+      gap: 0.7rem;
+    }
+
+    .form label {
+      display: grid;
+      gap: 0.3rem;
+      color: #f0e4d1;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .form input,
+    .form select {
+      width: 100%;
+      border: 1px solid rgba(230, 211, 179, 0.24);
+      border-radius: 12px;
+      padding: 0.78rem 0.85rem;
+      background: rgba(15, 15, 16, 0.72);
+      color: var(--off-white);
+      outline: none;
+    }
+
+    .form input:focus,
+    .form select:focus {
+      border-color: rgba(198, 40, 30, 0.75);
+      box-shadow: 0 0 0 3px rgba(198, 40, 30, 0.2);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .contact-card {
+      padding: 1.2rem;
+    }
+
+    .contact-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .contact-list a {
+      color: #f2e6d4;
+    }
+
+    .hours {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.9rem;
+    }
+
+    .hours td {
+      border-bottom: 1px solid rgba(230, 211, 179, 0.14);
+      padding: 0.48rem 0;
+      color: #e9dcc8;
+      font-size: 0.92rem;
+    }
+
+    iframe {
+      width: 100%;
+      border: 0;
+      border-radius: 12px;
+      min-height: 300px;
+    }
+
+    .footer {
+      padding: 2.5rem 0 1.5rem;
+      background: #101011;
+      border-top: 1px solid rgba(230, 211, 179, 0.16);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .footer-links,
+    .footer-social {
+      display: grid;
+      gap: 0.38rem;
+    }
+
+    .copyright {
+      margin-top: 1.2rem;
+      text-align: center;
+      color: var(--soft-gray);
+      font-size: 0.86rem;
+    }
+
+    .wa-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      color: white;
+      font-size: 1.5rem;
+      z-index: 997;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.32);
+      animation: pulse 2.2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.48);
+      }
+      70% {
+        box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .desktop-nav,
+      .desktop-cta {
+        display: none;
+      }
+
+      .menu-btn {
+        display: inline-flex;
+      }
+
+      .hero-grid,
+      .enroll-grid,
+      .contact-grid,
+      .footer-grid,
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .courses-grid,
+      .feature-grid,
+      .results-grid,
+      .gallery-grid,
+      .announcement-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(var(--max-width), calc(100% - 1.4rem));
+      }
+
+      .hero .container {
+        padding-inline: 0.4rem;
+      }
+
+      .section {
+        padding: 4.2rem 0;
+      }
+
+      .hero-metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .courses-grid,
+      .feature-grid,
+      .results-grid,
+      .gallery-grid,
+      .announcement-grid,
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonial-wrap {
+        padding: 0;
+      }
+
+      .slider-arrow {
+        position: static;
+        transform: none;
+      }
+
+      .slider-controls {
+        display: flex;
+        justify-content: center;
+        gap: 0.6rem;
+        margin-top: 0.8rem;
+      }
+
+      .wa-float {
+        width: 54px;
+        height: 54px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Sahak English Studio home">
+        <img class="brand-logo" src="images/logo.png" alt="Sahak English Studio logo" onerror="this.style.display='none';document.getElementById('brandFallback').style.display='grid';" />
+        <span class="brand-mark" id="brandFallback" style="display:none;">SE</span>
+        <span class="brand-text">
+          <strong>Sahak English Studio</strong>
+          <span>Peshawar</span>
+        </span>
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#courses">Courses</a>
+        <a href="#results">Results</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-primary desktop-cta" href="https://wa.me/923059254922?text=Hello!%20I%20want%20to%20enroll%20at%20Sahak%20English%20Studio." target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i>
+        Enroll Now
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobileDrawer">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile navigation">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#courses">Courses</a>
+    <a href="#results">Results</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+    <a class="btn btn-primary" href="https://wa.me/923059254922?text=Hello!%20I%20want%20to%20enroll%20at%20Sahak%20English%20Studio." target="_blank" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i>
+      Enroll Now
+    </a>
+  </aside>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy" data-aos="fade-up">
+          <p class="eyebrow">Professional English Academy</p>
+          <h1>Speak With Confidence. Succeed Globally.</h1>
+          <p>
+            Fresh batches commencing Monday, 20th April 2026. Join Sahak English Studio for IELTS, PTE, Oxford ELLT, LanguageCert, Duolingo, Spoken English, and Interview Preparation.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#courses">Explore Courses</a>
+            <a class="btn btn-outline" href="https://wa.me/923059254922?text=Hello!%20I%27d%20like%20to%20enroll%20at%20Sahak%20English%20Studio." target="_blank" rel="noopener">Enroll via WhatsApp</a>
+          </div>
+          <div class="hero-metrics">
+            <div class="metric">
+              <strong>1</strong>
+              <span>Certified Trainers</span>
+            </div>
+            <div class="metric">
+              <strong>2</strong>
+              <span>Personalized Coaching</span>
+            </div>
+            <div class="metric">
+              <strong>3</strong>
+              <span>Flexible Timing</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-panel" data-aos="fade-left" data-aos-delay="120">
+          <h3>Latest Highlights</h3>
+          <ul>
+            <li>Fresh Batches Commencing Monday, 20th April 2026</li>
+            <li>Courses Offered: IELTS, PTE, Oxford ELLT, LanguageCert, Duolingo, Spoken English, and Interview Preparation</li>
+            <li>Available Time Slots:</li>
+            <li>08:00 – 10:00 | 10:00 – 12:00 | 12:00 – 14:00 | 14:00 – 16:00 | 16:00 – 18:00 | 18:00 – 20:00</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head" data-aos="fade-right">
+          <p class="eyebrow">About The Academy</p>
+          <h2>Modern Language Mentorship in Peshawar</h2>
+          <p>
+            Sahak English Studio is an active language and exam preparation academy in Peshawar. Public posts show a clear focus on practical communication, test readiness, and structured batch admissions.
+          </p>
+        </div>
+        <div class="two-col">
+          <article class="panel" data-aos="fade-up">
+            <h3>Our Story</h3>
+            <p>
+              The academy is currently running admission campaigns and student-focused communication pathways. While the full official long-form history is not publicly visible in this environment, visible activity reflects a growth-oriented coaching ecosystem.
+            </p>
+            <p>
+              Founded Year: <strong>[UPDATE THIS]</strong>
+            </p>
+          </article>
+          <article class="panel" data-aos="fade-up" data-aos-delay="100">
+            <h3>Mission, Vision, Values</h3>
+            <ul class="value-list">
+              <li><strong>Mission:</strong> Build confident English communicators prepared for academics, interviews, and global pathways.</li>
+              <li><strong>Vision:</strong> Become a trusted academy for internationally aligned English outcomes in Peshawar.</li>
+              <li><strong>Values:</strong> Consistency, student recognition, disciplined practice, and measurable progress.</li>
+            </ul>
+          </article>
+        </div>
+        <div class="stats-grid" data-aos="zoom-in-up">
+          <article class="stat">
+            <strong class="counter" data-target="7">0</strong>
+            <span>Programs Announced</span>
+          </article>
+          <article class="stat">
+            <strong class="counter" data-target="3">0</strong>
+            <span>Public Posts Captured</span>
+          </article>
+          <article class="stat">
+            <strong class="counter" data-target="1">0</strong>
+            <span>Student Shoutout</span>
+          </article>
+          <article class="stat">
+            <strong class="counter" data-target="20">0</strong>
+            <span>April 2026 Batch Start</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="courses" class="section section-muted">
+      <div class="container">
+        <div class="section-head" data-aos="fade-right">
+          <p class="eyebrow">Courses & Programs</p>
+          <h2>Structured Learning Tracks</h2>
+          <p>Every card below includes quick WhatsApp enrollment with a prefilled message for the selected program.</p>
+        </div>
+        <div class="courses-grid">
+          <article class="card" data-aos="fade-up">
+            <span class="pill">International Exam</span>
+            <h3>IELTS Preparation</h3>
+            <ul class="course-meta">
+              <li>Duration: 8-10 weeks</li>
+              <li>Timing: Morning and evening batches</li>
+              <li>Fee: [UPDATE THIS]</li>
+              <li>Eligibility: Intermediate and above</li>
+            </ul>
+            <a class="btn btn-outline" href="https://wa.me/923059254922?text=Hello!%20I%20want%20to%20enroll%20in%20IELTS%20Preparation.%20Please%20share%20details." target="_blank" rel="noopener">Enroll via WhatsApp</a>
+          </article>
+          <article class="card" data-aos="fade-up" data-aos-delay="70">
+            <span class="pill">International Exam</span>
+            <h3>PTE Preparation</h3>
+            <ul class="course-meta">
+              <li>Duration: 6-8 weeks</li>
+              <li>Timing: Evening weekday sessions</li>
+              <li>Fee: [UPDATE THIS]</li>
+              <li>Eligibility: Intermediate and above</li>
+            </ul>
+            <a class="btn btn-outline" href="https://wa.me/923059254922?text=Hello!%20I%20want%20to%20enroll%20in%20PTE%20Preparation.%20Please%20share%20details." target="_blank" rel="noopener">Enroll via WhatsApp</a>
+          </article>
+          <article class="card" data-aos="fade-up" data-aos-delay="140">
+            <span class="pill">University Pathway</span>
+            <h3>Oxford ELLT</h3>
+            <ul class="course-meta">
+              <li>Duration: 6 weeks</li>
+              <li>Timing: Alternate-day classes</li>
+              <li>Fee: [UPDATE THIS]</li>
+              <li>Eligibility: Pathway applicants</li>
+            </ul>
+            <a class="btn btn-outline" href="https://wa.me/923059254922?text=Hello!%20I%20want%20to%20enroll%20in%20Oxford%20ELLT.%20Please%20share%20details." target="_blank" rel="noopener">Enroll via WhatsApp</a>
+          </article>
+          <article class="card" data-aos="fade-up">
+            <span class="pill">International Exam</span>
+            <h3>LanguageCert</h3>
+            <ul class="course-meta">
+              <li>Duration: 6 weeks</li>
+              <li>Timing: Three classes per week</li>
+              <li>Fee: [UPDATE THIS]</li>
+              <li>Eligibility: Basic English proficiency</li>
+            </ul>
+            <a class="btn btn-outline" href="https://wa.me/923059254922?text=Hello!%20I%20want%20to%20enroll%20in%20LanguageCert.%20Please%20share%20details." target="_blank" rel="noopener">Enroll via WhatsApp</a>
+          </article>
+          <article class="card" data-aos="fade-up" data-aos-delay="70">
+            <span class="pill">Digital Test Prep</span>
+            <h3>Duolingo Test Prep</h3>
+            <ul class="course-meta">
+              <li>Duration: 4-6 weeks</li>
+              <li>Timing: Fast-track weekday batches</li>
+              <li>Fee: [UPDATE THIS]</li>
+              <li>Eligibility: Students and professionals</li>
+            </ul>
+            <a class="btn btn-outline" href="https://wa.me/923059254922?text=Hello!%20I%20want%20to%20enroll%20in%20Duolingo%20Test%20Prep.%20Please%20share%20details." target="_blank" rel="noopener">Enroll via WhatsApp</a>
+          </article>
+          <article class="card" data-aos="fade-up" data-aos-delay="140">
+            <span class="pill">Communication Skills</span>
+            <h3>Spoken English</h3>
+            <ul class="course-meta">
+              <li>Duration: 8 weeks</li>
+              <li>Timing: Daily conversation labs</li>
+              <li>Fee: [UPDATE THIS]</li>
+              <li>Eligibility: Open for all levels</li>
+            </ul>
+            <a class="btn btn-outline" href="https://wa.me/923059254922?text=Hello!%20I%20want%20to%20enroll%20in%20Spoken%20English.%20Please%20share%20details." target="_blank" rel="noopener">Enroll via WhatsApp</a>
+          </article>
+          <article class="card" data-aos="fade-up">
+            <span class="pill">Career Readiness</span>
+            <h3>Interview Preparation</h3>
+            <ul class="course-meta">
+              <li>Duration: 4 weeks</li>
+              <li>Timing: Weekend and evening options</li>
+              <li>Fee: [UPDATE THIS]</li>
+              <li>Eligibility: Job seekers and students</li>
+            </ul>
+            <a class="btn btn-outline" href="https://wa.me/923059254922?text=Hello!%20I%20want%20to%20enroll%20in%20Interview%20Preparation.%20Please%20share%20details." target="_blank" rel="noopener">Enroll via WhatsApp</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="why-us">
+      <div class="container">
+        <div class="section-head" data-aos="fade-right">
+          <p class="eyebrow">Why Choose Us</p>
+          <h2>Focused Systems for Real Outcomes</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="card feature" data-aos="fade-up"><i class="fa-solid fa-chalkboard-user"></i><div><h3>Experienced Faculty</h3><p>Coaching design reflects exam and communication outcomes.</p></div></article>
+          <article class="card feature" data-aos="fade-up" data-aos-delay="50"><i class="fa-solid fa-bullseye"></i><div><h3>Proven Exam Focus</h3><p>IELTS, PTE, Oxford ELLT, LanguageCert, and Duolingo tracks are actively promoted.</p></div></article>
+          <article class="card feature" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-user-group"></i><div><h3>Small Batch Attention</h3><p>Regular fresh-batch intake supports personalized mentoring cycles.</p></div></article>
+          <article class="card feature" data-aos="fade-up"><i class="fa-regular fa-clock"></i><div><h3>Flexible Timings</h3><p>Morning, evening, and weekend options for diverse schedules.</p></div></article>
+          <article class="card feature" data-aos="fade-up" data-aos-delay="50"><i class="fa-solid fa-comments"></i><div><h3>Speaking-First Culture</h3><p>Spoken English and interview readiness are core training outcomes.</p></div></article>
+          <article class="card feature" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-medal"></i><div><h3>Student Recognition</h3><p>Public student appreciation reflects mentorship and growth support.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="results" class="section section-muted">
+      <div class="container">
+        <div class="section-head" data-aos="fade-right">
+          <p class="eyebrow">Results & Achievements</p>
+          <h2>Recent Success Signals</h2>
+        </div>
+        <div class="results-grid">
+          <article class="card" data-aos="zoom-in">
+            <h3>Student Appreciation</h3>
+            <p>Hazrat Ali Shinwari, all the best for your future endeavors.</p>
+            <span class="badge">Public Reel Highlight</span>
+          </article>
+          <article class="card" data-aos="zoom-in" data-aos-delay="100">
+            <h3>Active Admissions</h3>
+            <p>Fresh batches commencing Monday, 20th April 2026.</p>
+            <span class="badge">Admissions Notice</span>
+          </article>
+          <article class="card" data-aos="zoom-in" data-aos-delay="200">
+            <h3>Program Diversity</h3>
+            <p>Seven programs announced in one campaign across exam and communication pathways.</p>
+            <span class="badge">Multi-Track Readiness</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section">
+      <div class="container">
+        <div class="section-head" data-aos="fade-right">
+          <p class="eyebrow">Testimonials</p>
+          <h2>What Learners Say</h2>
+          <p>Visible public review text is limited in this environment; entries below include captured wording and clearly marked update slots.</p>
+        </div>
+        <div class="testimonial-wrap" data-aos="fade-up">
+          <button class="slider-arrow prev" id="prevTestimonial" aria-label="Previous testimonial"><i class="fa-solid fa-chevron-left"></i></button>
+          <article class="testimonial-card card" id="testimonialCard"></article>
+          <button class="slider-arrow next" id="nextTestimonial" aria-label="Next testimonial"><i class="fa-solid fa-chevron-right"></i></button>
+          <div class="slider-controls" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="events" class="section section-muted">
+      <div class="container">
+        <div class="section-head" data-aos="fade-right">
+          <p class="eyebrow">Announcements & Events</p>
+          <h2>Latest Notices Timeline</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item" data-aos="fade-up">
+            <time>21 hours ago (captured)</time>
+            <h3>Fresh Batches Commencing</h3>
+            <p>Fresh Batches Commencing Monday, 20th April 2026.</p>
+          </article>
+          <article class="timeline-item" data-aos="fade-up" data-aos-delay="70">
+            <time>On Sunday (captured)</time>
+            <h3>Student Appreciation + Reminder</h3>
+            <p>Hazrat Ali Shinwari, all the best for your future endeavors. New batches start tomorrow, Monday, 20th April 2026.</p>
+          </article>
+          <article class="timeline-item" data-aos="fade-up" data-aos-delay="140">
+            <time>On Saturday (captured)</time>
+            <h3>Admission Alert</h3>
+            <p>New batches on Monday, the 20th April, 2026.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="container">
+        <div class="section-head" data-aos="fade-right">
+          <p class="eyebrow">Gallery</p>
+          <h2>Campus Moments & Batch Highlights</h2>
+        </div>
+        <div class="gallery-grid">
+          <article class="gallery-card" data-aos="zoom-in"><p>Annual Prize Distribution [UPDATE THIS]</p></article>
+          <article class="gallery-card" data-aos="zoom-in" data-aos-delay="50"><p>Batch 2024 Results [UPDATE THIS]</p></article>
+          <article class="gallery-card" data-aos="zoom-in" data-aos-delay="100"><p>IELTS Speaking Practice Session [UPDATE THIS]</p></article>
+          <article class="gallery-card" data-aos="zoom-in"><p>PTE Preparation Class [UPDATE THIS]</p></article>
+          <article class="gallery-card" data-aos="zoom-in" data-aos-delay="50"><p>Student Achievement Wall [UPDATE THIS]</p></article>
+          <article class="gallery-card" data-aos="zoom-in" data-aos-delay="100"><p>Interview Prep Workshop [UPDATE THIS]</p></article>
+        </div>
+        <p class="gallery-note">[Client to replace with real photos]</p>
+      </div>
+    </section>
+
+    <section id="enroll" class="section section-muted">
+      <div class="container">
+        <div class="enroll-box" data-aos="fade-up">
+          <div class="enroll-grid">
+            <div>
+              <p class="eyebrow">WhatsApp Enrollment</p>
+              <h2>Ready to Join? Enroll Today</h2>
+              <p style="margin-top:0.8rem; color:#ecdcc6;">
+                Fill in your details and continue directly to WhatsApp with your personalized enrollment request.
+              </p>
+            </div>
+            <form class="form" id="enrollForm">
+              <label>
+                Full Name
+                <input type="text" name="name" required placeholder="Enter your full name" />
+              </label>
+              <label>
+                Phone Number
+                <input type="tel" name="phone" required placeholder="Enter your phone number" />
+              </label>
+              <label>
+                Course Interested In
+                <select name="course" required>
+                  <option value="">Select a course</option>
+                  <option>IELTS Preparation</option>
+                  <option>PTE Preparation</option>
+                  <option>Oxford ELLT</option>
+                  <option>LanguageCert</option>
+                  <option>Duolingo Test Prep</option>
+                  <option>Spoken English</option>
+                  <option>Interview Preparation</option>
+                </select>
+              </label>
+              <button class="btn btn-primary" type="submit">
+                <i class="fa-brands fa-whatsapp"></i>
+                Enroll via WhatsApp
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head" data-aos="fade-right">
+          <p class="eyebrow">Contact & Location</p>
+          <h2>Connect With Sahak English Studio</h2>
+        </div>
+        <div class="contact-grid">
+          <article class="contact-card" data-aos="fade-up">
+            <h3>Contact Information</h3>
+            <ul class="contact-list" style="margin-top: 0.8rem;">
+              <li><strong>Academy:</strong> Sahak English Studio</li>
+              <li><strong>Address:</strong> MA plaza, Second floor, Nasir Bagh Road, Near Board, Peshawar, Pakistan, 25000</li>
+              <li><strong>City:</strong> Peshawar</li>
+              <li><strong>Phone:</strong> <a href="tel:+923059254922">0305 9254922</a></li>
+              <li><strong>WhatsApp:</strong> <a href="https://wa.me/923059254922" target="_blank" rel="noopener">0305 9254922</a></li>
+              <li><strong>Email:</strong> [UPDATE THIS]</li>
+              <li><strong>Facebook:</strong> <a href="https://www.facebook.com/p/Sahak-English-Studio-61577100928639/" target="_blank" rel="noopener">Official Page</a></li>
+            </ul>
+            <table class="hours" aria-label="Working hours">
+              <tr><td>Monday - Saturday</td><td>9:00 AM - 8:00 PM [UPDATE THIS]</td></tr>
+              <tr><td>Sunday</td><td>Closed [UPDATE THIS]</td></tr>
+            </table>
+          </article>
+          <article class="contact-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>Location Map</h3>
+            <iframe title="Sahak English Studio map" src="https://www.google.com/maps?q=MA%20plaza%20Second%20floor%20Nasir%20Bagh%20Road%20Near%20Board%20Peshawar%20Pakistan%2025000&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Sahak English Studio</h3>
+        <p style="margin-top:0.6rem; color:#dac8ac;">Learn with confidence through disciplined language practice, exam strategy, and personal mentorship.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <div class="footer-links" style="margin-top:0.6rem;">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#courses">Courses</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <div class="footer-social" style="margin-top:0.6rem;">
+          <a href="https://www.facebook.com/p/Sahak-English-Studio-61577100928639/" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+          <a href="https://wa.me/923059254922" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          <a href="tel:+923059254922"><i class="fa-solid fa-phone"></i> 0305 9254922</a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">&copy; <span id="year"></span> Sahak English Studio. All rights reserved.</p>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/923059254922?text=Hello!%20I%20want%20to%20enroll%20at%20Sahak%20English%20Studio." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    const whatsappNumber = "923059254922";
+
+    const testimonials = [
+      {
+        name: "Hazrat Ali Shinwari",
+        stars: 5,
+        text: "All the best for your future endeavors.",
+      },
+      {
+        name: "Student Feedback [UPDATE THIS]",
+        stars: 5,
+        text: "Excellent guidance for spoken English and confidence building. [UPDATE THIS]",
+      },
+      {
+        name: "Parent Feedback [UPDATE THIS]",
+        stars: 5,
+        text: "Disciplined classes, supportive environment, and visible progress in communication. [UPDATE THIS]",
+      },
+    ];
+
+    function initHeaderScroll() {
+      const header = document.getElementById("header");
+      if (!header) return;
+      const onScroll = () => {
+        if (window.scrollY > 24) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      };
+      window.addEventListener("scroll", onScroll);
+      onScroll();
+    }
+
+    function initMobileNav() {
+      const menuBtn = document.getElementById("menuBtn");
+      const drawer = document.getElementById("mobileDrawer");
+      const overlay = document.getElementById("mobileOverlay");
+      if (!menuBtn || !drawer || !overlay) return;
+
+      const closeDrawer = () => {
+        drawer.classList.remove("open");
+        overlay.classList.remove("show");
+        menuBtn.setAttribute("aria-expanded", "false");
+      };
+
+      menuBtn.addEventListener("click", () => {
+        const open = drawer.classList.toggle("open");
+        overlay.classList.toggle("show", open);
+        menuBtn.setAttribute("aria-expanded", String(open));
+      });
+
+      overlay.addEventListener("click", closeDrawer);
+      drawer.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeDrawer));
+    }
+
+    function initCounters() {
+      const counters = document.querySelectorAll(".counter");
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          const target = Number(el.dataset.target || "0");
+          const start = performance.now();
+          const duration = 1200;
+
+          const animate = (time) => {
+            const progress = Math.min((time - start) / duration, 1);
+            el.textContent = Math.floor(progress * target).toLocaleString();
+            if (progress < 1) requestAnimationFrame(animate);
+          };
+          requestAnimationFrame(animate);
+          obs.unobserve(el);
+        });
+      }, { threshold: 0.4 });
+
+      counters.forEach((counter) => observer.observe(counter));
+    }
+
+    function initTestimonials() {
+      const card = document.getElementById("testimonialCard");
+      const prev = document.getElementById("prevTestimonial");
+      const next = document.getElementById("nextTestimonial");
+      if (!card || !prev || !next) return;
+
+      let index = 0;
+
+      const render = () => {
+        const t = testimonials[index];
+        const stars = "★".repeat(Math.max(1, Math.min(5, t.stars)));
+        card.innerHTML = `
+          <p>${t.text}</p>
+          <div>
+            <p class="stars">${stars}</p>
+            <p><strong>${t.name}</strong></p>
+          </div>
+        `;
+      };
+
+      prev.addEventListener("click", () => {
+        index = (index - 1 + testimonials.length) % testimonials.length;
+        render();
+      });
+
+      next.addEventListener("click", () => {
+        index = (index + 1) % testimonials.length;
+        render();
+      });
+
+      setInterval(() => {
+        index = (index + 1) % testimonials.length;
+        render();
+      }, 5500);
+
+      render();
+    }
+
+    function initEnrollForm() {
+      const form = document.getElementById("enrollForm");
+      if (!form) return;
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const formData = new FormData(form);
+        const name = String(formData.get("name") || "").trim();
+        const phone = String(formData.get("phone") || "").trim();
+        const course = String(formData.get("course") || "").trim();
+
+        if (!name || !phone || !course) {
+          alert("Please complete all fields before submitting.");
+          return;
+        }
+
+        const message = `Hello! I'd like to enroll. My name is ${name}, my number is ${phone}, and I'm interested in ${course}.`;
+        const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+        window.open(url, "_blank", "noopener");
+      });
+    }
+
+    function setYear() {
+      const el = document.getElementById("year");
+      if (el) el.textContent = String(new Date().getFullYear());
+    }
+
+    function initAOS() {
+      if (window.AOS) {
+        window.AOS.init({ duration: 700, once: true, easing: "ease-out-cubic" });
+      }
+    }
+
+    initHeaderScroll();
+    initMobileNav();
+    initCounters();
+    initTestimonials();
+    initEnrollForm();
+    setYear();
+    initAOS();
+  </script>
+</body>
+</html>
